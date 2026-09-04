@@ -1,49 +1,419 @@
-<!DOCTYPE html>
-<html lang="es-MX">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>ECM &amp; SPACs: Equity Capital Markets y Special Purpose Acquisition Companies | RiskMathics Financial Institute</title>
-<meta name="robots" content="noindex, follow">
-<link rel="canonical" href="https://ecmspacs.riskmathicslabs.com/">
-<meta http-equiv="refresh" content="0; url=https://ecmspacs.riskmathicslabs.com/">
-<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700&family=Lora:wght@400;500&display=swap" rel="stylesheet">
+<!DOCTYPE html><html lang="es"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ECM &amp; SPACs | Wealth Institute</title>
+<link rel="canonical" href="https://spacs.wealthinstitute.com.mx/">
+<meta name="description" content="ECM &amp; SPACs. Explica cómo se financian las empresas en el mercado accionario: de la IPO al follow-on, con las fases críticas de valuación, regulación y comunicación con inversionistas. Una segunda sección desarma las SPACs, el vehículo que cruza el venture capital con los mercados públicos. Programa ejecutivo de 8 sesiones y 16 horas, Virtual Live. Private Wealth Management Institute.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Lora:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
 <style>
-:root{--paper:#f6f4f1;--navy:#0a1f3c;--ink:#1a2238;--terra:#b65c2e;--muted:#5b6472;--line:#e4ddd4;}
-*{box-sizing:border-box;margin:0;padding:0}
-html,body{height:100%}
-body{background:var(--paper);color:var(--ink);font-family:'Lora',Georgia,serif;
-  display:flex;flex-direction:column;min-height:100vh;-webkit-font-smoothing:antialiased}
-header{padding:22px 26px}
-.brand{display:inline-flex;align-items:center;gap:9px;text-decoration:none;color:var(--navy);
-  font-family:'Poppins',system-ui,sans-serif;font-weight:700;letter-spacing:.02em;font-size:15px}
-.brand img{height:24px;width:auto;display:block}
-main{flex:1;display:flex;align-items:center;justify-content:center;padding:24px}
-.card{width:100%;max-width:560px;background:#fff;border:1px solid var(--line);border-radius:14px;
-  padding:44px 40px;box-shadow:0 10px 40px rgba(10,31,60,.06);text-align:center}
-.eyebrow{font-family:'Poppins',sans-serif;font-weight:600;font-size:12px;letter-spacing:.14em;
-  text-transform:uppercase;color:var(--terra);margin-bottom:16px}
-h1{font-family:'Poppins',sans-serif;font-weight:700;font-size:26px;line-height:1.25;
-  color:var(--navy);margin-bottom:16px}
-p{font-size:16.5px;line-height:1.65;color:var(--muted);margin-bottom:14px}
-p strong{color:var(--ink);font-weight:600}
-.btn{display:inline-block;margin-top:14px;background:var(--terra);color:#fff;text-decoration:none;
-  font-family:'Poppins',sans-serif;font-weight:600;font-size:15px;padding:14px 26px;border-radius:9px}
-.btn:hover{background:#9c4d25}
-.fine{margin-top:18px;font-size:13px;color:#8b93a1}
-footer{padding:22px 26px;text-align:center;font-family:'Poppins',sans-serif;font-size:12px;color:#9aa2b0}
+:root{--bg:#EFF0EA;--bg2:#E5E6DC;--ink:#26323F;--soft:#5C6874;--acc:#7A5510;--deep:#7A5C2E;--title:#0A2540;--card:#FFFFFF;--rule:rgba(10,37,64,0.15);--glow:rgba(122,92,46,0.10)}
+*{margin:0;padding:0;box-sizing:border-box}html{scroll-behavior:smooth}
+body{background:var(--bg2);color:var(--ink);font-family:'Lora',Georgia,serif;font-size:17px;line-height:1.75}
+h1,h2,h3{font-family:'Poppins',Arial,sans-serif}
+.wrap{max-width:960px;margin:0 auto;padding:0 24px}
+.kicker{font-family:'Poppins',Arial,sans-serif;font-size:11px;letter-spacing:3.2px;text-transform:uppercase;color:var(--acc);font-weight:600}
+.hero{min-height:72vh;display:flex;flex-direction:column;justify-content:center;padding:96px 24px 72px;text-align:center;background:radial-gradient(1000px 560px at 50% 28%,rgba(122,92,46,0.33),transparent),linear-gradient(165deg,#101820,#000000)}
+.hero .serie{font-family:'Poppins',Arial,sans-serif;font-size:11.5px;letter-spacing:4.5px;text-transform:uppercase;color:var(--acc);font-weight:600}
+.hero h1{font-size:clamp(30px,5.6vw,58px);font-weight:800;color:var(--title);line-height:1.06;letter-spacing:-.5px;margin:20px auto 0;max-width:20ch}
+.hero .subt{font-family:'Poppins',Arial,sans-serif;font-size:clamp(14px,2vw,19px);color:var(--acc);margin-top:13px;font-weight:500}
+.hero .aud{font-style:italic;color:var(--soft);font-size:14.5px;margin-top:10px}
+.hero .rule{width:50px;height:2px;background:var(--acc);margin:24px auto 0}
+.chips{display:flex;flex-wrap:wrap;gap:9px;justify-content:center;margin:28px auto 0}
+.chip{font-family:'Poppins',Arial,sans-serif;font-size:11.5px;letter-spacing:1px;text-transform:uppercase;border:1px solid var(--rule);background:rgba(255,255,255,.04);color:var(--ink);padding:8px 15px;border-radius:30px;font-weight:600}
+.hero-ctas{display:flex;gap:13px;justify-content:center;margin-top:30px;flex-wrap:wrap}
+.btn{font-family:'Poppins',Arial,sans-serif;font-size:12.5px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;text-decoration:none;padding:15px 32px;border-radius:4px;display:inline-block}
+.btn-primary{background:var(--deep);color:#FFFFFF}.btn-primary:hover{background:var(--acc);color:#140306}
+.btn-ghost{border:1.5px solid rgba(255,255,255,.3);color:var(--ink)}.btn-ghost:hover{background:rgba(255,255,255,.06)}
+.sec{padding:66px 0;border-top:1px solid var(--rule)}
+.sec-title{font-size:clamp(24px,3.2vw,34px);font-weight:800;color:var(--title);line-height:1.15;margin:12px 0 8px}
+.sec-sub{font-style:italic;color:var(--soft);font-size:17px;max-width:740px}
+ol.temas{list-style:none;margin-top:28px;counter-reset:tema}
+ol.temas>li{padding:17px 0 17px 52px;position:relative;border-bottom:1px solid var(--rule);font-size:16px;counter-increment:tema}
+ol.temas>li::before{content:counter(tema,decimal-leading-zero);position:absolute;left:0;top:19px;font-family:'Poppins',Arial,sans-serif;font-weight:700;font-size:15px;color:var(--acc)}
+ol.temas b{color:var(--title);font-family:'Poppins',Arial,sans-serif;font-weight:600;font-size:15.5px}
+ul.sub{list-style:none;margin-top:10px}
+ul.sub li{padding:6px 0 6px 22px;position:relative;font-size:15px;color:var(--ink)}
+ul.sub li::before{content:"";position:absolute;left:2px;top:15px;width:7px;height:7px;background:var(--acc);border-radius:50%}
+.parte{margin-top:34px;border:1px solid var(--rule);background:var(--card);padding:30px 32px}
+.parte .pt{font-family:'Poppins',Arial,sans-serif;font-weight:700;color:var(--title);font-size:18px}
+.parte .pm{font-family:'Poppins',Arial,sans-serif;font-size:11.5px;letter-spacing:1.6px;text-transform:uppercase;color:var(--acc);margin-top:6px;font-weight:600}
+.quote{font-family:'Lora',Georgia,serif;font-style:italic;font-size:clamp(20px,3vw,28px);color:var(--title);text-align:center;max-width:620px;margin:0 auto;line-height:1.4}
+.quote small{display:block;font-style:normal;font-family:'Poppins',Arial,sans-serif;font-size:11px;letter-spacing:2.5px;text-transform:uppercase;color:var(--acc);margin-top:16px}
+.fac{display:grid;grid-template-columns:1fr;gap:22px;margin-top:30px}
+.fc{border:1px solid var(--rule);background:var(--card);padding:28px 30px}
+.fc .fn{font-family:'Poppins',Arial,sans-serif;font-weight:700;color:var(--title);font-size:18px}
+.fc .fr{font-family:'Poppins',Arial,sans-serif;font-size:12px;letter-spacing:1.4px;text-transform:uppercase;color:var(--acc);margin:6px 0 12px;font-weight:600}
+.fc p{font-size:15px;color:var(--ink)}
+.fechas{display:flex;flex-wrap:wrap;gap:10px;margin-top:26px}
+.fd{font-family:'Poppins',Arial,sans-serif;border:1px solid var(--rule);background:var(--card);padding:14px 20px;text-align:center;min-width:96px}
+.fd .d{font-size:20px;font-weight:800;color:var(--acc)}
+.fd .m{font-size:10px;letter-spacing:1.6px;text-transform:uppercase;color:var(--soft);margin-top:4px}
+.ficha{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--rule);border:1px solid var(--rule);margin-top:30px}
+.f{background:var(--card);padding:22px 14px;text-align:center}
+.f .n{font-family:'Poppins',Arial,sans-serif;font-size:19px;font-weight:800;color:var(--acc)}
+.f .l{font-family:'Poppins',Arial,sans-serif;font-size:10px;letter-spacing:1.4px;text-transform:uppercase;color:var(--soft);margin-top:7px}
+@media(max-width:700px){.ficha{grid-template-columns:repeat(2,1fr)}}
+footer{background:var(--bg2);color:var(--soft);padding:36px 24px;text-align:center;font-family:'Poppins',Arial,sans-serif;font-size:12px;line-height:2;border-top:1px solid var(--rule)}
+footer a{color:var(--acc);text-decoration:none}
+.tgl{font-family:'Lora',Georgia,serif;font-style:italic;color:var(--acc);font-size:15.5px;margin-top:12px}
+ol.temas .tg{display:block;font-family:'Lora',Georgia,serif;font-style:italic;color:var(--acc);font-size:14px;margin-top:9px}
+.abs p{font-size:16.5px;margin-top:18px;color:var(--ink)}.abs p b{color:var(--title)}
+.hl{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:30px}.hl .h{border:1px solid var(--rule);background:var(--card);padding:18px 20px}.hl .h b{font-family:'Poppins',Arial,sans-serif;color:var(--acc);font-weight:700;font-size:13px;display:block;margin-bottom:6px}.hl .h span{font-size:14.5px;color:var(--ink)}@media(max-width:700px){.hl{grid-template-columns:1fr}}
+ul.dir{list-style:none;margin-top:24px}ul.dir li{padding:10px 0 10px 26px;position:relative;font-size:15.5px;border-bottom:1px solid var(--rule)}ul.dir li::before{content:"";position:absolute;left:2px;top:19px;width:8px;height:8px;background:var(--acc);border-radius:50%}
 </style>
-</head>
-<body>
-<header><a class="brand" href="https://www.riskmathics.com/"><img src="rm-logo.png" alt="RiskMathics">RISKMATHICS</a></header>
-<main><div class="card">
-<div class="eyebrow">Programa actualizado</div>
-<h1>Este programa ahora se ofrece como ECM &amp; SPACs: Equity Capital Markets y Special Purpose Acquisition Companies</h1>
-<p>Te llevamos al programa vigente. Si no avanza en unos segundos, usa el boton.</p>
-<a class="btn" href="https://ecmspacs.riskmathicslabs.com/">Ver el programa vigente</a>
-<div class="fine">Tambien puedes consultar el <a href="https://cronograma26-27.riskmathicslabs.com/" style="color:var(--terra)">catalogo completo de programas</a>.</div>
-</div></main>
-<footer>RiskMathics Financial Institute</footer>
-<script>window.location.replace("https://ecmspacs.riskmathicslabs.com/");</script>
-</body>
-</html>
+<style>
+/* ==== Hero de portada PWM (replica del folleto) ==== */
+.pwm-hero{position:relative;padding:0;text-align:center;overflow:hidden;background:#0B1626}
+.pwm-foto{position:absolute;inset:0;background-size:cover;background-position:center 22%;
+  filter:saturate(.9)}
+.pwm-velo{position:absolute;inset:0;background:linear-gradient(180deg,
+  rgba(10,20,35,.30) 0%,rgba(10,20,35,.42) 46%,rgba(9,16,28,.88) 78%,rgba(8,14,24,.96) 100%)}
+.pwm-cont{position:relative;z-index:2;max-width:880px;margin:0 auto;
+  padding:clamp(150px,30vh,300px) 22px clamp(28px,4vh,44px)}
+.pwm-eyebrow{font-family:'Poppins',Arial,sans-serif;font-weight:600;font-size:13px;
+  letter-spacing:.42em;text-transform:uppercase;color:#F4F6F8;margin-bottom:14px}
+.pwm-hero h1{font-family:'Poppins',Arial,sans-serif;font-weight:800;text-transform:uppercase;
+  font-size:clamp(34px,6.2vw,62px);line-height:1.04;letter-spacing:.01em;color:#FFFFFF;
+  margin:0 0 10px;text-wrap:balance}
+.pwm-sub{font-family:'Poppins',Arial,sans-serif;font-weight:500;font-size:clamp(15px,2.2vw,21px);
+  letter-spacing:.14em;text-transform:uppercase;color:#E9EDF2;margin-bottom:18px}
+.pwm-brand{font-family:'Poppins',Arial,sans-serif;font-weight:500;font-size:13px;
+  letter-spacing:.34em;text-transform:uppercase;color:#DCE3EA;margin-top:26px}
+.pwm-mes{font-family:'Poppins',Arial,sans-serif;font-weight:500;font-size:12.5px;
+  letter-spacing:.30em;text-transform:uppercase;color:#C3CCD6;margin-top:8px}
+.pwm-hero .chips{display:flex;flex-wrap:wrap;gap:10px;justify-content:center;margin:26px 0 6px}
+.pwm-hero .chip{font-family:'Poppins',Arial,sans-serif;font-size:11.5px;letter-spacing:1.1px;
+  text-transform:uppercase;border:1px solid rgba(228,200,119,.42);background:rgba(11,22,38,.55);
+  color:#EFE3C8;padding:9px 16px;border-radius:30px;font-weight:600}
+.pwm-hero .chip b{color:#E4C877}
+.pwm-hero .hero-ctas{display:flex;gap:14px;justify-content:center;flex-wrap:wrap;margin:22px 0 4px}
+.pwm-hero .btn-primary{background:linear-gradient(135deg,#B4913C,#E4C877);color:#231A08;
+  box-shadow:0 10px 26px rgba(0,0,0,.35)}
+.pwm-hero .btn-ghost{border:1.5px solid rgba(244,246,248,.55);color:#F4F6F8}
+.pwm-claret{position:relative;z-index:2;background:#701C39;color:#F2E7EC;
+  font-family:'Poppins',Arial,sans-serif;font-weight:500;font-size:clamp(10.5px,1.5vw,13px);
+  letter-spacing:.14em;text-transform:uppercase;padding:12px 18px;text-align:center}
+.pwm-oro{position:relative;z-index:2;background:linear-gradient(90deg,#8F6F26 0%,#C9A751 28%,#E9D089 55%,#C9A751 82%,#8F6F26 100%);
+  display:flex;align-items:center;justify-content:space-between;gap:18px;
+  padding:12px clamp(16px,4vw,44px)}
+.pwm-oro img{height:44px;width:auto;display:block}
+.pwm-iada{font-family:'Poppins',Arial,sans-serif;font-weight:700;font-size:15px;
+  letter-spacing:.30em;color:#231A08;text-transform:uppercase;display:flex;align-items:baseline;gap:10px}
+.pwm-iada small{font-weight:500;font-size:8px;letter-spacing:.16em;display:block}
+@media(max-width:560px){.pwm-cont{padding-top:120px}.pwm-oro img{height:34px}}
+</style>
+<script id="upd-form-sep26">
+/* Contraste del formulario: el conversor de identidad dejo texto y fondo del mismo color.
+   Se mide el fondo pintado real y se elige el color legible. 2-sep-2026 v2. */
+(function(){
+  function lum(c){var m=String(c).match(/[\d.]+/g);if(!m||m.length<3)return null;
+    var f=function(x){x=x/255;return x<=0.03928?x/12.92:Math.pow((x+0.055)/1.055,2.4)};
+    return 0.2126*f(+m[0])+0.7152*f(+m[1])+0.0722*f(+m[2]);}
+  function ratio(a,b){var x=lum(a),y=lum(b);if(x===null||y===null)return 21;
+    return (Math.max(x,y)+0.05)/(Math.min(x,y)+0.05);}
+  function fondo(el){var e=el;
+    while(e&&e!==document.documentElement){var s=getComputedStyle(e);
+      if(s.backgroundImage&&s.backgroundImage!=="none"){
+        var g=s.backgroundImage.match(/rgba?\([^)]*\)/g);
+        if(g&&g.length){for(var i=0;i<g.length;i++){var l=lum(g[i]);if(l!==null)return g[i];}}}
+      var c=s.backgroundColor;
+      if(c&&c!=="rgba(0, 0, 0, 0)"&&c!=="transparent"){var a=String(c).match(/[\d.]+/g);
+        if(!a||a.length<4||parseFloat(a[3])>0.5)return c;}
+      e=e.parentElement;}
+    return "rgb(255, 255, 255)";}
+  function pinta(raiz){
+    if(!raiz)return;
+    var campos=raiz.querySelectorAll("input,select,textarea");
+    for(var i=0;i<campos.length;i++){
+      var el=campos[i];
+      if(el.type==="checkbox"||el.type==="radio"||el.type==="hidden")continue;
+      var bg=fondo(el), claro=lum(bg)>0.45;
+      var col=claro?"#1b2430":"#FFFFFF";
+      if(ratio(getComputedStyle(el).color,bg)>=4.5)continue;
+      el.style.setProperty("color",col,"important");
+      el.style.setProperty("-webkit-text-fill-color",col,"important");
+      el.style.setProperty("caret-color",col,"important");
+    }
+    var textos=raiz.querySelectorAll("label,label span,p,h2,h3,.rm-lab,a");
+    for(var j=0;j<textos.length;j++){
+      var t=textos[j], b2=fondo(t);
+      if(ratio(getComputedStyle(t).color,b2)>=4.5)continue;
+      t.style.setProperty("color",lum(b2)>0.45?"#1b2430":"#FFFFFF","important");
+    }
+  }
+  function todo(){
+    pinta(document.getElementById("rm-enroll"));
+    pinta(document.getElementById("rm-verify"));
+    pinta(document.getElementById("rm-thanks"));
+  }
+  if(document.readyState==="loading")document.addEventListener("DOMContentLoaded",todo);
+  else todo();
+  window.addEventListener("load",todo);
+  /* el bloque de verificacion y el de gracias se crean despues: re-pintar cuando aparezcan */
+  try{
+    var obs=new MutationObserver(function(){todo();});
+    var raiz=document.getElementById("rm-enroll");
+    if(raiz)obs.observe(raiz,{childList:true,subtree:true,attributes:true,attributeFilter:["style"]});
+  }catch(_){}
+})();
+</script>
+<style id="upd-option-sep26">
+/* El menu desplegable nativo lo pinta el sistema operativo con fondo blanco:
+   hay que fijar el color del texto o las opciones quedan invisibles. */
+#rm-enroll select option,#rm-enroll option{color:#111 !important;background-color:#fff !important}
+#rm-enroll select option:checked,#rm-enroll option:checked{color:#111 !important;background-color:#e8e8e8 !important}
+@media (prefers-color-scheme:dark){
+  #rm-enroll select option,#rm-enroll option{color:#111 !important;background-color:#fff !important}
+}
+</style>
+</head><body>
+<header class="hero pwm-hero">
+ <div class="pwm-foto" style="background-image:url('portada.jpg')"></div>
+ <div class="pwm-velo"></div>
+ <div class="pwm-cont">
+  <div class="pwm-eyebrow">Executive Program</div>
+  <h1>ECM &amp; SPACs</h1>
+  <div class="pwm-sub">Equity Capital Markets &amp; Special Purpose Acquisition Companies</div>
+  <div class="pwm-brand">Private Wealth Management</div>
+  <div class="pwm-mes">Fecha por confirmar</div>
+  <div class="chips">
+   <span class="chip"><b>Fecha de inicio por confirmar</b></span>
+   <span class="chip">8 sesiones · 16 horas</span>
+   <span class="chip">Virtual Live · 7:00–9:00 pm CDMX</span>
+   <span class="chip">MXN $30,000 + TAX</span>
+  </div>
+  <div class="hero-ctas"><a class="btn btn-primary" href="#rm-enroll">Inscr&iacute;bete</a><a class="btn btn-ghost" href="#temario">Ver temario</a></div>
+ </div>
+ <div class="pwm-claret">(Private Wealth Bankers, High-Net-Worth Individuals and Families)</div>
+ <div class="pwm-oro">
+  <span class="pwm-iada">IADA<small>Instituto de Alta Direcci&oacute;n<br>An&aacute;huac Business School</small></span>
+  <img src="pwm-seal.png" alt="Private Wealth Management Institute">
+ </div>
+</header>
+
+<section class="sec"><div class="wrap abs">
+ <div class="kicker">El programa</div><h2 class="sec-title">De qu&eacute; va.</h2>
+<p>El financiamiento por capital es la operación más visible de la banca de inversión y una de las peor comprendidas fuera de ella. Este módulo recorre el ciclo completo de una oferta pública de acciones: la preparación del emisor, due diligence y prospecto, la construcción del libro, la fijación del precio de salida y la asignación entre inversionistas institucionales, junto con los roles de underwriters, bookrunners y sindicatos colocadores, la mecánica del greenshoe y el fenómeno del underpricing analizado sobre casos famosos. Contrasta la práctica y la regulación de mercados desarrollados y emergentes, requisitos de listado, revelación de información, lock-ups, Regulación S y 144A, y cierra con colocaciones recientes en México. La Sección B desarma las SPACs: por qué surgieron, cómo se estructuran y ejecutan sus fusiones con empresas objetivo, y qué ventajas, riesgos y controversias cargan. Al concluir, el participante puede intervenir en la estructuración de una emisión de equity, sostener la comunicación con inversionistas institucionales durante una colocación y evaluar si una SPAC es una ruta viable de salida a bolsa o de inversión.</p><p>Dominar las etapas de una oferta pública, IPO o emisión subsecuente, el rol de la banca de inversión al estructurar estas transacciones y las diferencias de práctica y regulación entre mercados desarrollados y emergentes, para participar en la estructuración de emisiones de equity y comunicarse efectivamente con inversionistas institucionales; además, evaluar la viabilidad de una SPAC como opción estratégica de salida a bolsa o de inversión.</p>
+</div></section>
+<section class="sec"><div class="wrap">
+ <div class="kicker">Contenidos</div><h2 class="sec-title">Lo que cubre.</h2>
+ <div class="hl"><div class="h"><b>01</b><span>IPOs y emisiones subsecuentes (follow-on)</span></div><div class="h"><b>02</b><span>Due diligence y prospecto</span></div><div class="h"><b>03</b><span>Bookbuilding, pricing y asignación</span></div><div class="h"><b>04</b><span>Underpricing y casos famosos</span></div><div class="h"><b>05</b><span>Underwriters, bookrunners y sindicatos colocadores</span></div><div class="h"><b>06</b><span>Estabilización de precio y greenshoe</span></div><div class="h"><b>07</b><span>Roadshows e historia de inversión</span></div><div class="h"><b>08</b><span>Mercados desarrollados vs. emergentes</span></div><div class="h"><b>09</b><span>Regulación S, 144A y lock-ups</span></div><div class="h"><b>10</b><span>SPACs: estructura, incentivos y fusiones</span></div></div>
+</div></section>
+<section class="sec"><div class="wrap">
+ <div class="kicker">Dirigido a</div><h2 class="sec-title">Para qui&eacute;n es.</h2>
+ <ul class="dir"><li>Banqueros corporativos y de inversión</li><li>Tesoreros corporativos</li><li>CFOs y directores de finanzas</li><li>Private wealth bankers que asesoran empresarios</li><li>Profesionales de instituciones financieras con formación económico-administrativa y bases sólidas de matemáticas financieras</li></ul>
+</div></section>
+
+<section class="sec" id="temario"><div class="wrap">
+ <div class="kicker">Temario</div><h2 class="sec-title">Qu&eacute; vas a dominar.</h2>
+ <p class="sec-sub">8 sesiones en Virtual Live, 16 horas en total, de 7:00 pm a 9:00 pm hora de la Ciudad de M&eacute;xico.</p>
+ <ol class="temas"><li><b>Sección A — Equity Capital Markets</b> 5 clases (10 horas), imparte Mauricio Trigueros. Introducción a los mercados de capitales y su evolución histórica; proceso de emisión de acciones (IPO, follow-on y ofertas secundarias): due diligence, prospecto, bookbuilding, determinación del precio, asignación y colocación; mercados desarrollados vs. emergentes y sus implicaciones para el emisor; roles de underwriters, bookrunners, lead managers y sindicatos colocadores, estabilización de precio y greenshoe; roadshows y construcción de la historia de inversión; pricing y valuación (flujos vs. múltiplos comparables) y underpricing con casos famosos; regulación y mejores prácticas (requisitos de listado, revelación de información, lock-ups, Regulación S y 144A); casos reales de colocaciones en México y otros mercados emergentes.</li><li><b>Sección B — SPACs (Special Purpose Acquisition Company)</b> 3 clases (6 horas). El modelo SPAC como vehículo alternativo de financiamiento: por qué surgió, motivaciones estratégicas, diseño de incentivos y arquitectura financiera; cómo se estructuran y llevan a cabo las fusiones con empresas objetivo; ventajas, riesgos y controversias del mecanismo, en la frontera entre el venture capital y los mercados públicos.</li></ol>
+</div></section>
+<section class="sec"><div class="wrap">
+ <div class="kicker">Faculty</div><h2 class="sec-title">Qui&eacute;nes lo imparten.</h2>
+ <div class="fac"><div class="fc"><div class="fn">Mauricio Trigueros</div><div class="fr">Consultor</div><p>Inició en 1996 en Probursa y operó a viva voz en el piso de la BMV. En GBM encabezó la Mesa de Capitales y participó en el lanzamiento del Home Broker. Fue director en Vector y, desde 2017, pieza clave en la autorización y arranque de Bursamétrica Casa de Bolsa, donde llegó a DGA de Administración y Finanzas.</p></div><div class="fc"><div class="fn">Secci&oacute;n B &middot; SPACs</div><div class="fr">Instructor por confirmar</div><p>Tres clases (6 horas) sobre estructura, incentivos y fusiones de las SPACs.</p></div></div>
+</div></section>
+
+<section class="sec"><div class="wrap">
+ <div class="kicker">El programa</div><h2 class="sec-title">Ficha del programa.</h2>
+ <p class="sec-sub">Regístrate y recibe el temario completo por correo; un asesor te contacta el mismo día.</p>
+ <div class="ficha">
+  <div class="f"><div class="n">8</div><div class="l">Sesiones</div></div>
+  <div class="f"><div class="n">16</div><div class="l">Horas totales</div></div>
+  <div class="f"><div class="n">Por confirmar</div><div class="l">Inicio</div></div>
+  <div class="f"><div class="n">MXN $30,000 + TAX</div><div class="l">Inversi&oacute;n</div></div>
+ </div>
+</div></section>
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/intl-tel-input@18.2.1/build/css/intlTelInput.css">
+<style>
+ #rm-enroll .iti{width:100%;}
+ #rm-enroll .iti__selected-flag{background:transparent;padding-left:0;}
+ #rm-enroll input,#rm-enroll select{outline:none;background:transparent;}
+ #rm-enroll .rm-in{width:100%;border:none;border-bottom:1px solid #dfe5ee;border-radius:0;padding:9px 1px 10px;font-size:15px;font-family:'Lora',Georgia,serif;color:#1b2430;transition:border-color .18s;}
+ #rm-enroll .rm-in:focus{border-bottom-color:#8f9bb0;}
+ #rm-enroll .rm-in::placeholder{color:#b7c0cd;}
+ #rm-enroll .rm-lb{display:block;font-family:'Poppins',Arial,sans-serif;font-size:10px;letter-spacing:1.6px;font-weight:500;color:#5C6880;text-transform:uppercase;margin-bottom:2px;}
+ #rm-enroll select.rm-in{appearance:none;-webkit-appearance:none;background-image:url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='6'%3E%3Cpath d='M1 1l4 4 4-4' stroke='%2393A0B4' stroke-width='1.4' fill='none'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 4px center;padding-right:20px;}
+ @media (max-width:560px){#rm-enroll .rm-2col{grid-template-columns:1fr !important;}}
+</style>
+<section id="rm-enroll" style="background:linear-gradient(150deg,#101820,#000000);color:#fff;padding:88px 22px;font-family:'Poppins',Arial,sans-serif;">
+ <div style="max-width:600px;margin:0 auto;">
+ <div style="text-align:center;margin-bottom:38px;">
+ <div style="color:#C9A96A;letter-spacing:3px;font-size:10.5px;font-weight:500;">INSCRIPCIÓN · CUPO LIMITADO</div>
+ <h2 style="font-size:26px;margin:16px 0 0;font-weight:600;line-height:1.25;letter-spacing:.3px;">Asegura tu lugar</h2>
+ <div style="width:50px;height:2px;background:#C9A96A;margin:18px auto;"></div>
+ <p style="color:#c2cee0;font-size:15px;margin:0;font-family:'Lora',Georgia,serif;font-style:italic;">Déjanos tus datos, verifica tu correo y tu WhatsApp,<br>y recibe el temario completo. Sin compromiso.</p>
+ </div>
+ <div style="background:#ffffff;color:#1b2430;border-radius:6px;padding:44px 42px;border:1px solid rgba(255,255,255,.14);box-shadow:0 2px 24px rgba(0,0,0,.16);">
+ <form id="rm-lead" onsubmit="return rmSubmit(event)" style="display:grid;gap:22px;">
+ <div><label class="rm-lb">Nombre(s)</label><input class="rm-in" name="nombre" required></div>
+ <div class="rm-2col" style="display:grid;grid-template-columns:1fr 1fr;gap:22px 20px;">
+ <div><label class="rm-lb">Apellido paterno</label><input class="rm-in" name="apellido_paterno" required></div>
+ <div><label class="rm-lb">Apellido materno</label><input class="rm-in" name="apellido_materno"></div>
+ </div>
+ <div><label class="rm-lb">Tipo de registro</label>
+ <select class="rm-in" name="tipo_interes" required onchange="var individual=this.value==='individual',form=this.form;['puesto','empresa','sector'].forEach(function(name){var field=form.elements[name];if(field)field.required=!individual;});">
+ <option value="" disabled selected></option>
+ <option value="individual">Inscripción individual</option>
+ <option value="grupo">Grupo o delegación</option>
+ <option value="licencia_corporativa">Licencia / cohorte corporativa</option>
+ </select>
+ <small style="display:block;margin-top:7px;color:#5C6880;font-family:'Lora',Georgia,serif;font-size:11.5px;">Para inscripción individual, empresa, puesto y sector son opcionales.</small>
+ </div>
+ <div><label class="rm-lb">Email corporativo o institucional</label><input class="rm-in" type="email" name="email" required></div>
+ <div class="rm-2col" style="display:grid;grid-template-columns:1fr 1fr;gap:22px 20px;">
+ <div><label class="rm-lb">Puesto</label><input class="rm-in" name="puesto" required></div>
+ <div><label class="rm-lb">Institución / Empresa</label><input class="rm-in" name="empresa" required></div>
+ </div>
+ <div><label class="rm-lb">Sector financiero / industria</label>
+ <select class="rm-in" name="sector" required>
+ <option value="" disabled selected></option>
+ <option>AFORE / Fondos de Pensión</option>
+ <option>Aseguradora / Insurance</option>
+ <option>Banca</option>
+ <option>Casa de Bolsa / Broker Dealer</option>
+ <option>Asset Manager</option>
+ <option>Hedge Fund</option>
+ <option>Family Office</option>
+ <option>Corporativo</option>
+ <option>PyME</option>
+ <option>Gobierno</option>
+ <option>Energía</option>
+ <option>Otro</option>
+ </select>
+ </div>
+ <div class="rm-2col" style="display:grid;grid-template-columns:1fr 1fr;gap:22px 20px;">
+ <div><label class="rm-lb">País</label>
+ <select class="rm-in" name="pais" required>
+ <option value="" disabled data-iso=""></option>
+ <option data-iso="mx" selected>México</option>
+ <option data-iso="us">Estados Unidos</option>
+ <option data-iso="es">España</option>
+ <option data-iso="co">Colombia</option>
+ <option data-iso="pe">Perú</option>
+ <option data-iso="cl">Chile</option>
+ <option data-iso="ar">Argentina</option>
+ <option data-iso="ec">Ecuador</option>
+ <option data-iso="gt">Guatemala</option>
+ <option data-iso="pa">Panamá</option>
+ <option data-iso="cr">Costa Rica</option>
+ <option data-iso="do">República Dominicana</option>
+ <option data-iso="bo">Bolivia</option>
+ <option data-iso="uy">Uruguay</option>
+ <option data-iso="py">Paraguay</option>
+ <option data-iso="ve">Venezuela</option>
+ <option data-iso="hn">Honduras</option>
+ <option data-iso="sv">El Salvador</option>
+ <option data-iso="ni">Nicaragua</option>
+ <option data-iso="br">Brasil</option>
+ <option data-iso="ca">Canadá</option>
+ <option data-iso="">Otro</option>
+ </select>
+ </div>
+ <div><label class="rm-lb">WhatsApp (opcional)</label><input class="rm-in" id="rm-whatsapp" name="whatsapp" type="tel"></div>
+ </div>
+ <label style="display:flex;align-items:flex-start;gap:10px;font-size:11.5px;color:#5a6577;font-family:'Lora',Georgia,serif;line-height:1.55;cursor:pointer;margin-top:2px;">
+ <input type="checkbox" name="privacidad" required style="margin-top:2px;width:14px;height:14px;flex:none;cursor:pointer;accent-color:#1b2430;">
+ <span>He leído y acepto el <a href="https://cronograma.wealthinstitute.com.mx/aviso-privacidad.html" target="_blank" rel="noopener" style="color:#1b2430;font-weight:600;text-decoration:underline;text-underline-offset:2px;">Aviso de Privacidad</a> y autorizo el tratamiento de mis datos y ser contactado por Wealth Institute.</span>
+ </label>
+ <button type="submit" style="background:#7A5C2E;color:#ffffff;font-weight:600;font-size:13px;letter-spacing:1.8px;text-transform:uppercase;border:none;padding:17px;border-radius:4px;cursor:pointer;font-family:'Poppins',Arial,sans-serif;margin-top:4px;">Quiero el temario</button>
+ <p style="font-size:10.5px;color:#5C6880;margin:0;text-align:center;font-family:'Poppins',Arial,sans-serif;letter-spacing:.4px;">Verificamos tu correo y tu teléfono con un código · Datos protegidos</p>
+ </form>
+ <div id="rm-verify" style="display:none;"></div>
+ <div id="rm-thanks" style="display:none;border:1px solid #b7e4c7;background:#f6fdf9;color:#1b4332;padding:22px;border-radius:6px;font-size:14.5px;font-family:'Lora',Georgia,serif;line-height:1.6;"><b>Listo.</b> Recibimos y verificamos tu correo. Te enviamos el temario a tu correo y un asesor te contactará.</div>
+ <div style="margin-top:34px;padding-top:28px;border-top:1px solid #edf0f5;text-align:center;">
+ <div style="font-size:10px;color:#5C6880;letter-spacing:2.2px;font-family:'Poppins',Arial,sans-serif;">O INSCRÍBETE Y PAGA DIRECTO</div>
+ <div style="font-size:30px;font-weight:300;color:#7A5C2E;margin:14px 0 2px;font-family:'Poppins',Arial,sans-serif;letter-spacing:.5px;">MXN $30,000 <span style="font-size:15px;font-weight:400;color:#5C6880;letter-spacing:.5px;">+ TAX</span></div>
+ <div style="font-size:11px;color:#5C6880;font-family:'Lora',Georgia,serif;font-style:italic;margin-bottom:18px;">MXN $30,000 · 8 sesiones · 16 horas</div>
+ <div style="display:grid;gap:10px;">
+ <a id="rm-paypal" href="https://bffdsgvgcvmojobfiuay.supabase.co/functions/v1/paypal-pay?curso=spacs" target="_blank" rel="noopener" style="background:#7A5C2E;color:#ffffff;font-weight:600;font-size:12.5px;letter-spacing:1.6px;text-transform:uppercase;padding:15px;border-radius:4px;text-decoration:none;white-space:nowrap;font-family:'Poppins',Arial,sans-serif;">Pagar con PayPal</a>
+ <a id="rm-stripe" href="https://buy.stripe.com/14A5kv7jpg5i2gh7Z72RA3i" target="_blank" rel="noopener" style="background:transparent;border:1.5px solid #7A5C2E;color:#7A5C2E;font-weight:600;font-size:12.5px;letter-spacing:1.6px;text-transform:uppercase;padding:14px;border-radius:4px;text-decoration:none;white-space:nowrap;font-family:'Poppins',Arial,sans-serif;">Pagar con tarjeta · Stripe</a>
+ </div>
+ <p style="font-size:11px;color:#5C6880;margin-top:14px;font-family:'Lora',Georgia,serif;font-style:italic;">Private Wealth Management Institute &middot; programas ejecutivos para banca privada, family offices e inversionistas institucionales</p>
+<p style="font-size:10.5px;color:#5C6880;margin-top:6px;font-family:'Poppins',Arial,sans-serif;letter-spacing:.4px;">Meses sin intereses disponibles con PayPal</p>
+<p style="font-size:10px;color:#64707E;margin-top:16px;font-family:'Poppins',Arial,sans-serif;letter-spacing:.5px;">100% seguro · SSL · PayPal Verified · Wealth Management Institute</p>
+ </div>
+ </div>
+ </div>
+</section>
+<script src="https://cdn.jsdelivr.net/npm/intl-tel-input@18.2.1/build/js/intlTelInput.min.js"></script>
+<script>
+const RM_CFG={marca:"wi",id:"spacs",folleto:"",paypal:"https://bffdsgvgcvmojobfiuay.supabase.co/functions/v1/paypal-pay?curso=spacs",stripe:"https://buy.stripe.com/14A5kv7jpg5i2gh7Z72RA3i"};
+const RM_VURL="https://bffdsgvgcvmojobfiuay.supabase.co/functions/v1/verify-lead";
+const RM_VKEY="eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImJmZmRzZ3ZnY3Ztb2pvYmZpdWF5Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzUzOTQ0NzQsImV4cCI6MjA5MDk3MDQ3NH0.7VKn7st3POLRTLIXx9Y4gRjXbh8v_BKXblc7vFIVu-U";
+let RM_LEAD=null;var rmIti=null;
+(function(){var pp=document.getElementById('rm-paypal');if(pp&&!RM_CFG.paypal)pp.style.display='none';var sp=document.getElementById('rm-stripe');if(sp&&!RM_CFG.stripe)sp.style.display='none';
+var tel=document.getElementById('rm-whatsapp');var sel=document.querySelector('#rm-lead select[name=pais]');
+if(window.intlTelInput&&tel){rmIti=window.intlTelInput(tel,{initialCountry:"mx",preferredCountries:["mx","us","co","pe","cl","ar","es"],separateDialCode:true,utilsScript:"https://cdn.jsdelivr.net/npm/intl-tel-input@18.2.1/build/js/utils.js"});
+if(sel){sel.addEventListener('change',function(){var o=sel.options[sel.selectedIndex];if(o&&o.dataset.iso&&rmIti)rmIti.setCountry(o.dataset.iso);});
+tel.addEventListener('countrychange',function(){if(!rmIti)return;var c=rmIti.getSelectedCountryData();for(var i=0;i<sel.options.length;i++){if((sel.options[i].dataset.iso||'')===c.iso2){sel.selectedIndex=i;break;}}});}}})();
+async function rmPost(p){const r=await fetch(RM_VURL,{method:"POST",headers:{"Content-Type":"application/json","apikey":RM_VKEY,"Authorization":"Bearer "+RM_VKEY},body:JSON.stringify(p)});return r.json();}
+async function rmSubmit(e){e.preventDefault();const f=e.target,d=Object.fromEntries(new FormData(f));
+if(!f.privacidad||!f.privacidad.checked){alert("Debes aceptar el Aviso de Privacidad para continuar.");return false;}
+var phone="";if(window.rmIti){try{phone=rmIti.getNumber()||"";}catch(_){phone="";}}
+if(!phone){phone=(d.whatsapp||"").trim().replace(/[\s\-()]/g,"");if(phone&&!phone.startsWith("+"))phone="+52"+phone.replace(/^0+/,"");}
+d.phone=phone;d.apellido=((d.apellido_paterno||"")+" "+(d.apellido_materno||"")).trim();
+var so=f.pais&&f.pais.options[f.pais.selectedIndex];d.pais=(so&&so.text)||d.pais||"";d.pais_iso=((so&&so.dataset.iso)||"").toUpperCase();
+d.curso=RM_CFG.id;d.marca=RM_CFG.marca||"";d.folleto=RM_CFG.folleto;d.privacidad=true;RM_LEAD=d;
+const b=f.querySelector('button[type=submit]');const txt=b.textContent;b.textContent="ENVIANDO...";b.disabled=true;let res;
+try{res=await rmPost(Object.assign({action:"start"},d));}catch(_){res={};}
+if(res&&res.need_corporate){b.textContent=txt;b.disabled=false;rmCorporativo(res.contacto||{});return false;}
+if(res&&res.ok){f.style.display="none";rmGracias(res);}
+else{b.textContent=txt;b.disabled=false;alert((res&&res.error)||"No pudimos registrar tus datos. Escribenos a info@wealthinstitute.com.mx o por WhatsApp al +52 55 1901 5763");}
+return false;}
+/* Confirmacion inmediata: el prospecto nunca espera un correo (3-sep-2026). */
+function rmGracias(res){
+  var c=(res&&res.contacto)||{};
+  var wa=c.whatsapp||"https://wa.me/525519015763";
+  var waTxt=c.whatsapp_texto||"+52 55 1901 5763";
+  var mail=c.correo||"info@wealthinstitute.com.mx";
+  var box=document.getElementById('rm-thanks');
+  if(!box){box=document.createElement('div');box.id='rm-thanks';var v=document.getElementById('rm-verify');if(v&&v.parentNode)v.parentNode.insertBefore(box,v.nextSibling);}
+  box.innerHTML='<div style="padding:26px 24px;border-radius:8px;border:1px solid rgba(128,128,128,.35)">'+
+    '<p style="margin:0 0 10px;font-family:\'Poppins\',Arial,sans-serif;font-weight:700;font-size:18px">Listo, recibimos tus datos.</p>'+
+    '<p style="margin:0 0 18px;font-family:\'Lora\',Georgia,serif;font-size:15.5px;line-height:1.65">Un asesor te contacta hoy mismo'+
+    (res&&res.correo_enviado?' y te mandamos la informacion a tu correo':'')+'. Si prefieres, escribenos directo ahora:</p>'+
+    '<div style="display:grid;gap:10px">'+
+      '<a href="'+wa+'" target="_blank" rel="noopener" style="background:#25D366;color:#fff;font-weight:600;font-size:13px;letter-spacing:1px;text-transform:uppercase;padding:14px;border-radius:4px;text-decoration:none;text-align:center;font-family:\'Poppins\',Arial,sans-serif">WhatsApp '+waTxt+'</a>'+
+      '<a href="mailto:'+mail+'?subject=Informes%20'+encodeURIComponent(RM_CFG.id)+'" style="border:1.5px solid currentColor;font-weight:600;font-size:12.5px;letter-spacing:1px;text-transform:uppercase;padding:13px;border-radius:4px;text-decoration:none;text-align:center;font-family:\'Poppins\',Arial,sans-serif">'+mail+'</a>'+
+      '<a href="tel:+525555363597" style="border:1.5px solid currentColor;font-weight:600;font-size:12.5px;letter-spacing:1px;text-transform:uppercase;padding:13px;border-radius:4px;text-decoration:none;text-align:center;font-family:\'Poppins\',Arial,sans-serif">+52 55 5536 3597 ext. 2223</a>'+
+    '</div></div>';
+  box.style.display="block";
+  try{box.scrollIntoView({behavior:"smooth",block:"center"});}catch(_){box.scrollIntoView();}
+  try{todoContraste&&todoContraste();}catch(_){}
+}
+function rmCorporativo(c){var box=document.getElementById('rm-verify');
+box.innerHTML='<div style="border:1px solid #f0d9a8;background:#fffaf0;padding:22px;border-radius:6px;">'+
+'<p style="margin:0 0 14px;font-size:15px;color:#1b2430;font-family:\'Lora\',Georgia,serif;line-height:1.6;">Para enviarte el temario necesitamos tu <b>correo institucional o de empresa</b>.</p>'+
+'<p style="margin:0 0 18px;font-size:14px;color:#5a6577;font-family:\'Lora\',Georgia,serif;line-height:1.6;">Si no cuentas con uno, escribenos y con gusto te atendemos:</p>'+
+'<div style="display:grid;gap:10px;">'+
+'<a href="'+(c.whatsapp||"https://wa.me/525519015763")+'" target="_blank" rel="noopener" style="background:#25D366;color:#fff;font-weight:600;font-size:13px;letter-spacing:1px;text-transform:uppercase;padding:14px;border-radius:4px;text-decoration:none;text-align:center;font-family:\'Poppins\',Arial,sans-serif;">Escribenos por WhatsApp</a>'+
+'<a href="tel:'+(c.telefono||"+525519015763").replace(/\s/g,"")+'" style="border:1.5px solid #1b2430;color:#1b2430;font-weight:600;font-size:13px;letter-spacing:1px;text-transform:uppercase;padding:13px;border-radius:4px;text-decoration:none;text-align:center;font-family:\'Poppins\',Arial,sans-serif;">Llamar '+(c.whatsapp_texto||"+52 55 1901 5763")+'</a>'+
+'<a href="mailto:'+(c.correo||"info@wealthinstitute.com.mx")+'?subject=Informes%20'+encodeURIComponent(RM_CFG.id)+'" style="border:1.5px solid #dfe5ee;color:#5a6577;font-weight:600;font-size:12.5px;letter-spacing:1px;text-transform:uppercase;padding:13px;border-radius:4px;text-decoration:none;text-align:center;font-family:\'Poppins\',Arial,sans-serif;">'+(c.correo||"info@wealthinstitute.com.mx")+'</a>'+
+'</div><p style="margin:16px 0 0;font-size:12px;color:#5C6880;font-family:\'Lora\',Georgia,serif;font-style:italic;text-align:center;">O corrige tu correo arriba e intenta de nuevo.</p></div>';
+box.style.display="block";box.scrollIntoView({behavior:"smooth",block:"center"});}
+function rmShowCode(email){var c=document.getElementById('rm-verify');
+c.innerHTML='<p style="margin:0 0 20px;font-size:14.5px;color:#1b2430;font-family:\'Lora\',Georgia,serif;line-height:1.6;">Te enviamos un <b>codigo</b> a <b>'+email+'</b>. Escribelo aqui para recibir tu temario:</p>'+
+'<div style="margin-bottom:24px;"><label style="display:block;font-family:\'Poppins\',Arial,sans-serif;font-size:10px;letter-spacing:1.6px;font-weight:500;color:#5C6880;text-transform:uppercase;margin-bottom:4px;">Codigo de 6 digitos</label>'+
+'<input id="rm-otp-email" inputmode="numeric" maxlength="6" style="width:100%;border:none;border-bottom:1px solid #dfe5ee;padding:9px 1px 10px;font-size:22px;letter-spacing:8px;font-family:\'Poppins\',Arial,sans-serif;color:#1b2430;outline:none;"></div>'+
+'<button type="button" onclick="rmVerify()" style="width:100%;background:#0a1f3c;color:#ffffff;font-weight:600;font-size:13px;letter-spacing:1.8px;text-transform:uppercase;border:none;padding:16px;border-radius:4px;cursor:pointer;font-family:\'Poppins\',Arial,sans-serif;">Verificar y recibir temario</button>'+
+'<p id="rm-vmsg" style="font-size:11.5px;color:#5C6880;margin-top:10px;font-family:\'Lora\',Georgia,serif;"></p>'+
+'<p style="font-size:11.5px;color:#5C6880;margin-top:14px;font-family:\'Lora\',Georgia,serif;">No te llego? Revisa tu bandeja de no deseados o escribenos a <a href="mailto:info@wealthinstitute.com.mx" style="color:#0a1f3c;">info@wealthinstitute.com.mx</a></p>';
+c.style.display="block";var i=document.getElementById('rm-otp-email');if(i)i.focus();}
+async function rmVerify(){var ecode=(document.getElementById('rm-otp-email').value||"").trim();var m=document.getElementById('rm-vmsg');
+if(ecode.length<4){m.textContent="Escribe el codigo que te enviamos por correo.";return;}
+m.textContent="Verificando...";var res;
+try{res=await rmPost(Object.assign({},RM_LEAD,{action:"check",email_code:ecode}));}catch(_){res={};}
+if(res&&res.verified){document.getElementById('rm-verify').style.display="none";document.getElementById('rm-thanks').style.display="block";if(RM_CFG.folleto)window.open(RM_CFG.folleto,'_blank');}
+else{m.textContent=(res&&res.error)||"Codigo incorrecto o vencido. Intenta de nuevo.";}}
+</script>
+<!-- ===== /SALES MACHINE v3.2 ===== -->
+<script>(function(){var U="https://bffdsgvgcvmojobfiuay.supabase.co/functions/v1/rm-hit";function h(e){var d=JSON.stringify({slug:"spacs",ev:e});try{navigator.sendBeacon(U,d)}catch(_){try{fetch(U,{method:"POST",body:d,keepalive:true})}catch(__){}}}h("view");document.addEventListener("click",function(ev){var a=ev.target&&ev.target.closest?ev.target.closest("a"):null;if(!a)return;var href=a.href||"";if(href.indexOf("buy.stripe.com")>=0)h("stripe");else if(href.indexOf("paypal-pay")>=0)h("paypal");},true);})();</script>
+<script async src="https://bffdsgvgcvmojobfiuay.supabase.co/functions/v1/rm-pixel"></script>
+
+<footer>PRIVATE WEALTH MANAGEMENT INSTITUTE<br>
+Informes: <a href="mailto:info@wealthinstitute.com.mx">info@wealthinstitute.com.mx</a> &middot; <a href="https://wa.me/525519015763" target="_blank" rel="noopener">WhatsApp +52 55 1901 5763</a><br>
+&copy; 2026 Wealth Management Institute, S.A.P.I. de C.V.
+</footer>
+<!--WI-CORNER-LOGO--><style>#rmcl{position:fixed;top:12px;left:16px;z-index:99998;line-height:0}#rmcl img{height:34px;width:auto;display:block;filter:drop-shadow(0 2px 6px rgba(0,0,0,.45))}@media(max-width:900px){#rmcl{display:none}}</style><a id="rmcl" href="https://wealthinstitute.com.mx" target="_blank" rel="noopener" aria-label="Wealth Institute"><img src="wi-logo.png" alt="Private Wealth Management Institute"></a>
+</body></html>
